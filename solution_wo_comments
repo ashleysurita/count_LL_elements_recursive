@@ -1,0 +1,10 @@
+function countElements(head) {
+    if(!head) return 0
+    let count = 0
+    count += 1
+    if(head.next){
+        const recur = countElements(head.next)
+        count += recur
+    }
+    return count
+}
